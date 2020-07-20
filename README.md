@@ -1,2 +1,7 @@
 # Santiment_analysis_project
- Educational project on creating SA models for reviews
+by Artem Glazunov
+
+Educational project on creating SA models for reviews
+You can find the whole branch of creation, final model and simple demo on Flask, as well as screenchots.
+
+
