@@ -1,4 +1,4 @@
-# Santiment_analysis_project
+# Sentiment_analysis_project
 by Artem Glazunov
 
 Educational project on creating SA models for reviews
