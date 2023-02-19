@@ -1,0 +1,20 @@
+name: CI-CD-pipe-docker
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  ci_part:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Git clone the repo
+        uses: actions/checkout@v1
+        
+      - name: Check the repo
+        run : cd ./week7_final_result/SA_model_DEMO_AVG && ls -la
+        
+      - name: docker build
+        run: cd ./week7_final_result && docker build -t my_app_docker .
