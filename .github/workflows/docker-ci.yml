@@ -17,4 +17,7 @@ jobs:
         run : cd ./week7_final_result/SA_model_DEMO_AVG && ls -la
         
       - name: docker build
-        run: cd ./week7_final_result && docker build -t my_app_docker .
+        run: cd ./week7_final_result && docker build -t my_app_docker . 
+        
+      - name: test
+        run: docker run my_app_docker:latest -p 5000:5000 & (sleep 5 && curl http://127.0.0.1:5000/)
