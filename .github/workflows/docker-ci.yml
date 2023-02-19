@@ -20,4 +20,4 @@ jobs:
         run: cd ./week7_final_result && docker build -t my_app_docker . 
         
       - name: test
-        run: docker run my_app_docker:latest -p 5000:5000 & (sleep 5 && curl http://127.0.0.1:5000/)
+        run: docker run -p 5000:5000 my_app_docker:latest & (sleep 5 && curl http://127.0.0.1:5000/)
