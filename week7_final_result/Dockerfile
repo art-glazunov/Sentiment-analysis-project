@@ -6,8 +6,6 @@ COPY ./SA_model_DEMO_AVG ./SA_model_DEMO_AVG
 
 RUN pip install flask scikit-learn
 
-CMD ["cd", "./SA_model_DEMO_AVG"]
-
-CMD ["python", "SA_demo_AVG_final.py", "&", "sleep", "4"]
+CMD ["cd", "./SA_model_DEMO_AVG", "&&", "python", "SA_demo_AVG_final.py", "&", "sleep", "4"]
     
     
