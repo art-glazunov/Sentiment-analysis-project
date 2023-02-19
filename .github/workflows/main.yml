@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v1
         
       - name: Check the repo
-        run : cd /week7_final_result/SA_model_DEMO_AVG/ && ls -la
+        run : cd ./week7_final_result/SA_model_DEMO_AVG && ls -la
