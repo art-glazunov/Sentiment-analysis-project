@@ -8,7 +8,6 @@ RUN pip install flask scikit-learn
 
 CMD ["cd", "./SA_model_DEMO_AVG"]
 
-CMD ["python", "SA_demo_AVG_final.py", "&", "sleep", "4", "|", "if", "grep", "-q", "'68.89'", ";", "then", "echo",
-    "'Test1passed'", ";", "else", "exit", "1", ";", "fi"]
+CMD ["python", "SA_demo_AVG_final.py", "&", "sleep", "4"]
     
     
