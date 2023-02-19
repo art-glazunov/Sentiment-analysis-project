@@ -1,0 +1,17 @@
+name: CI-CD-pipe
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  ci_part:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Git clone the repo
+        uses: actions/checkout@v1
+        
+      - name: Check the repo
+        run : ls -la
