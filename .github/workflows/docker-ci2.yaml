@@ -20,4 +20,4 @@ jobs:
         run: cd ./week7_final_result/SA_model_DEMO_AVG && docker build -t my_app_docker2 . 
         
       - name: test
-        run: docker run -p 5000:5000 my_app_docker2:latest & (sleep 3 & sudo curl http://localhost:5000/ | if grep -q "Введите" ; then echo 'Test passed'; else exit 1; fi)
+        run: docker run -p 5000:5000 my_app_docker2:latest & (sleep 3 && curl http://localhost:5000/ | if grep -q "Введите" ; then echo 'Test passed'; else exit 1; fi)
