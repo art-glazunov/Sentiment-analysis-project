@@ -6,6 +6,6 @@ COPY ./SA_model_DEMO_AVG ./SA_model_DEMO_AVG
 
 RUN pip install flask scikit-learn
 
-CMD ["cd", "./SA_model_DEMO_AVG", "&&", "python", "SA_demo_AVG_final.py", "&", "sleep", "4"]
+CMD cd ./week7_final_result/SA_model_DEMO_AVG/ && (python SA_demo_AVG_final.py & sleep 4) | if grep -q "68.89 %" ; then echo 'Test1 passed'; else exit 1; fi
     
     
