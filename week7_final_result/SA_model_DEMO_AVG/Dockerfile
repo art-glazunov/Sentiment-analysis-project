@@ -2,7 +2,7 @@ FROM python:3.6
 
 WORKDIR /app
 
-COPY . /app
+COPY . .
 
 RUN pip install flask scikit-learn
 
