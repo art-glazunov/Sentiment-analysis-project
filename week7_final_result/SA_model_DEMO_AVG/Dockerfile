@@ -6,5 +6,7 @@ COPY . .
 
 RUN pip install flask scikit-learn
 
+EXPOSE 5000
+
 CMD python SA_demo_AVG_final.py & sleep 10
     
