@@ -7,6 +7,8 @@ Status_1: <br>
 Status_2: <br>
 <img src="https://github.com/art-glazunov/Santiment-analysis-project/workflows/CI-CD-pipe-docker/badge.svg?branch=master"><br>
 
+Status_3: <br>
+<img src="https://github.com/art-glazunov/Santiment-analysis-project/workflows/CI-CD-pipe-docker2/badge.svg?branch=master"><br>
 
 Educational project on creating SA models for reviews
 
