@@ -8,6 +8,6 @@ RUN pip install flask scikit-learn
 
 CMD cd ./SA_model_DEMO_AVG/ && (python SA_demo_AVG_final.py & sleep 4) | if grep -q "68.89 %" ; then echo 'Test1 passed'; else exit 1; fi
 
-CMD curl http://127.0.0.1:5000/ | if grep -q "Введите" ; then echo 'Test2 passed'; else exit 1; fi
+CMD cd ./SA_model_DEMO_AVG/ && (python SA_demo_AVG_final.py & sleep 10) & (curl http://127.0.0.1:5000/ | if grep -q "Введите" ; then echo 'Test2 passed'; else exit 1; fi)
     
     
