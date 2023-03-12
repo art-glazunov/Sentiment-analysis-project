@@ -21,7 +21,7 @@ jobs:
         
       - name: test1
         run: (docker run -p 5000:5000 my_app_docker2:latest & sleep 4) 
-             | if grep -q "68.89 %" ; then echo 'Test1 passed'; else exit 1; fi
+             | if grep -q "69.89 %" ; then echo 'Test1 passed'; else exit 1; fi
         
       - name: test2
         run: docker run -d -p 5000:5000 my_app_docker2:latest 
