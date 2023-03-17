@@ -27,3 +27,7 @@ jobs:
       - name: test2
         run: docker run -d -p 5000:5000 my_app_docker2:latest 
              & (sleep 3 && curl http://localhost:5000/ | if grep -q "Введите" ; then echo 'Test2 passed'; else exit 1; fi)
+     
+      - name: test3
+        run: docker run -d -p 5000:5000 my_app_docker2:latest 
+             & (sleep 3 && curl http://localhost:5000/model | if grep -q "Описание" ; then echo 'Test3 passed'; else exit 1; fi)
