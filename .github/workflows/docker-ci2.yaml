@@ -21,13 +21,17 @@ jobs:
         run: cd ./week7_final_result/SA_model_DEMO_AVG && docker build -t my_app_docker2 . 
         
       - name: test1
-        run: (docker run -p 5000:5000 my_app_docker2:latest & sleep 4) 
+        run: (docker run -p 3000:3000 my_app_docker2:latest & sleep 4) 
              | if grep -q "68.89 %" ; then echo 'Test1 passed' ; fi
         
       - name: test2
-        run: docker run -d -p 5000:5000 my_app_docker2:latest 
-             & (sleep 3 && curl http://localhost:5000/ | if grep -q "Введите" ; then echo 'Test2 passed'; else exit 1; fi)
-     
+        run: docker run -d -p 4000:4000 my_app_docker2:latest 
+             & (sleep 3 && curl http://localhost:4000/ | if grep -q "Введите" ; then echo 'Test2 passed'; else exit 1; fi)
+      
       - name: test3
         run: docker run -d -p 5000:5000 my_app_docker2:latest 
-             & (sleep 3 && curl http://localhost:5000/model | if grep -q "TfidfVectorizer(min_df=20" ; then echo 'Test3 passed'; else exit 1; fi)
+             & (sleep 3 && curl http://localhost:5000/model | if grep -q "TfidfVectorizer(min_df=10" ; then echo 'Test3 passed'; else exit 1; fi)
+      
+      - name: test4
+        run: docker run -d -p 6000:6000 my_app_docker2:latest 
+             & (sleep 3 && curl http://localhost:6000/model | if grep -q "TfidfVectorizer(min_df=20" ; then echo 'Test4 passed'; else exit 1; fi)
