@@ -47,10 +47,10 @@ class LogRegTfidfClf(object):
             class_label = self.predict_class(text)
             probability = self.predict_prob(text)
             if class_label==1:
-                prediction_message = 'отзыв положительный с вероятностью: '+\
+                prediction_message = 'Отзыв положительный с вероятностью: '+\
                 str(round(probability[0,1]*100,2))+' %'
             else:        
-                prediction_message = 'отзыв отрицательный с вероятностью: '+\
+                prediction_message = 'Отзыв отрицательный с вероятностью: '+\
                 str(round(probability[0,0]*100,2))+' %'
             return prediction_message
         
