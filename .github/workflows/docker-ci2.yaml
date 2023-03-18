@@ -21,7 +21,7 @@ jobs:
         run: cd ./week7_final_result/SA_model_DEMO_AVG && docker build -t my_app_docker2 . 
         
       - name: test1
-        run: (docker run -p 5000:5000 my_app_docker2:latest) 
+        run: (docker run -p 5000:5000 my_app_docker2:latest & sleep 2) 
              | if grep -q "68.89 %" ; then echo 'Test1 passed' ; fi
       
       - name: test2
